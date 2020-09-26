@@ -347,6 +347,7 @@ nav .nav-links a:hover {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   right: 0;
+  border-left: 2px solid #777;
 }
 
 .opened {
@@ -357,10 +358,6 @@ nav .nav-links a:hover {
 
 .opened .row {
   opacity: 1;
-}
-
-.opened .row .col-7 {
-  border-left: 2px solid #777;
 }
 
 .hero {
