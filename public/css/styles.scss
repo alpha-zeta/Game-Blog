@@ -272,7 +272,6 @@ nav {
                 li{
                     font-size: 3rem;
                     color: #fff5;
-                    // text-shadow: 0 0 2px #777;
                     margin-bottom: 50px;
                     cursor: pointer;
                     line-height: 3.2rem;
@@ -285,7 +284,7 @@ nav {
         .col-7{
             transition: all 0.3s ease-in;
             right: 0;
-            border-left: 2px solid #777;
+            border-left: 2px solid #fff5;
             text-align: center;
             align-items: center;
             justify-items: center;
@@ -299,7 +298,7 @@ nav {
                     font-size: 5rem;
                     color: #fff5;
                 }
-                h2{
+                h3{
                     color: #fff5;
                 }
                 .sign{
@@ -309,18 +308,69 @@ nav {
                     }
                     opacity: 0;
                     transition: all 0.3s ease-in;
-                    // input{
-                    //     display: block;
-                    //     width: 100%;
-                    //     margin-bottom: 25px;
-                    //     background: $lemon;
-                    //     border-radius: 5px;
-                    // }
-                    // button{
-                    //     display: block;
-                    // }
                 }
+                .social-btn{
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                .social{
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    backdrop-filter: blur(12px);
+                    border: none;
+                    text-align: center;
+                    justify-content: center;
+                    margin-right: 40px;
+                    transition: all 0.3s ease-in;
+                    cursor: pointer;
+                    button{
+                        background: transparent;
+                        border: none;
+                        position: absolute;
+                        top: 52%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    button:focus{
+                        outline: none;
+                    }
+                    i{
+                        font-size: 1.2rem;
+                    }
+                }
+                .g{
+                    background-color: rgba(219,68,55,0.2);
+                }
+                .f{
+                    background-color: rgba(66,103,178,0.2);
+                }
+                .s{
+                    background-color: rgba(27, 40, 56,0.2);
+                    margin: 0;
+                }
+                .g:hover{
+                    background-color: rgba(219,68,55,1);
+                    i{
+                        color: #fff;
+                    }
+                }
+                .f:hover{
+                    background-color: rgba(66,103,178,1);
+                    i{
+                        color: #fff;
+                    }
+                }
+                .s:hover{
+                    background-color: rgba(27, 40, 56,1);
+                    i{
+                        color: #fff;
+                    }
+                }
+
             }
+        
 
         }
         transition: all 0.3s ease-in;

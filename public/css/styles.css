@@ -347,7 +347,7 @@ nav .nav-links a:hover {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   right: 0;
-  border-left: 2px solid #777;
+  border-left: 2px solid #fff5;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -371,7 +371,7 @@ nav .nav-links a:hover {
   color: #fff5;
 }
 
-.menu .row .col-7 .heading h2 {
+.menu .row .col-7 .heading h3 {
   color: #fff5;
 }
 
@@ -384,6 +384,84 @@ nav .nav-links a:hover {
 
 .menu .row .col-7 .heading .sign #emailHelp {
   color: #fff5 !important;
+}
+
+.menu .row .col-7 .heading .social-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.menu .row .col-7 .heading .social {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border: none;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 40px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.menu .row .col-7 .heading .social button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.menu .row .col-7 .heading .social button:focus {
+  outline: none;
+}
+
+.menu .row .col-7 .heading .social i {
+  font-size: 1.2rem;
+}
+
+.menu .row .col-7 .heading .g {
+  background-color: rgba(219, 68, 55, 0.2);
+}
+
+.menu .row .col-7 .heading .f {
+  background-color: rgba(66, 103, 178, 0.2);
+}
+
+.menu .row .col-7 .heading .s {
+  background-color: rgba(27, 40, 56, 0.2);
+  margin: 0;
+}
+
+.menu .row .col-7 .heading .g:hover {
+  background-color: #db4437;
+}
+
+.menu .row .col-7 .heading .g:hover i {
+  color: #fff;
+}
+
+.menu .row .col-7 .heading .f:hover {
+  background-color: #4267b2;
+}
+
+.menu .row .col-7 .heading .f:hover i {
+  color: #fff;
+}
+
+.menu .row .col-7 .heading .s:hover {
+  background-color: #1b2838;
+}
+
+.menu .row .col-7 .heading .s:hover i {
+  color: #fff;
 }
 
 .opened {
