@@ -271,7 +271,8 @@ nav {
                 list-style-type: none;
                 li{
                     font-size: 3rem;
-                    color: #125DB3;
+                    color: #fff5;
+                    // text-shadow: 0 0 2px #777;
                     margin-bottom: 50px;
                     cursor: pointer;
                     line-height: 3.2rem;
@@ -285,6 +286,42 @@ nav {
             transition: all 0.3s ease-in;
             right: 0;
             border-left: 2px solid #777;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            .heading{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                h1{
+                    font-size: 5rem;
+                    color: #fff5;
+                }
+                h2{
+                    color: #fff5;
+                }
+                .sign{
+                    text-align: left;
+                    #emailHelp{
+                        color: #fff5 !important;
+                    }
+                    opacity: 0;
+                    transition: all 0.3s ease-in;
+                    // input{
+                    //     display: block;
+                    //     width: 100%;
+                    //     margin-bottom: 25px;
+                    //     background: $lemon;
+                    //     border-radius: 5px;
+                    // }
+                    // button{
+                    //     display: block;
+                    // }
+                }
+            }
+
         }
         transition: all 0.3s ease-in;
     }
@@ -296,6 +333,13 @@ nav {
     scroll-snap-stop: always;
     .row{
         opacity: 1;
+        .col-7{
+            .heading{
+                .sign{
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 //////////////*******hero div

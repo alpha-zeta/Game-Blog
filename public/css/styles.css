@@ -333,7 +333,7 @@ nav .nav-links a:hover {
 
 .menu .row .colum ul li {
   font-size: 3rem;
-  color: #125DB3;
+  color: #fff5;
   margin-bottom: 50px;
   cursor: pointer;
   line-height: 3.2rem;
@@ -348,6 +348,42 @@ nav .nav-links a:hover {
   transition: all 0.3s ease-in;
   right: 0;
   border-left: 2px solid #777;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .row .col-7 .heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.menu .row .col-7 .heading h1 {
+  font-size: 5rem;
+  color: #fff5;
+}
+
+.menu .row .col-7 .heading h2 {
+  color: #fff5;
+}
+
+.menu .row .col-7 .heading .sign {
+  text-align: left;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.menu .row .col-7 .heading .sign #emailHelp {
+  color: #fff5 !important;
 }
 
 .opened {
@@ -357,6 +393,10 @@ nav .nav-links a:hover {
 }
 
 .opened .row {
+  opacity: 1;
+}
+
+.opened .row .col-7 .heading .sign {
   opacity: 1;
 }
 
