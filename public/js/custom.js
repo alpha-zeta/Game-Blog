@@ -56,6 +56,7 @@ expand.addEventListener("click",function(){
         let initWidth=$(document.body).innerWidth();
     }
 });
+
 //navbar change after scrolling
 // var prevScrollpos = window.pageYOffset;
 // window.onscroll = function () {
@@ -67,6 +68,7 @@ expand.addEventListener("click",function(){
 //     }
 //     prevScrollpos = currentScrollPos;
 // };
+
 //image change of hero div
 const link1="https://images.pushsquare.com/c46c7bb54c4c3/horizon-zero-dawn-ps4-playstation-4.original.jpg";
 const link2="https://data1.origin.com/content/dam/originx/web/app/programs/Download/aboutorigin_3840x2160_battlefield1.jpg";
@@ -80,3 +82,16 @@ setInterval(()=>{
         imgInd=0;
     }
 },2000);
+
+//changing sign in sign up in menu
+const signin=$(".col-6")[0];
+const signup=$(".col-6")[1];
+const swich=$(".switch")[0];
+signin.addEventListener("click",()=>{
+    swich.style.left="0";
+    swich.style.right="50%";
+});
+signup.addEventListener("click",()=>{
+    swich.style.left="50%";
+    swich.style.right="0";
+});

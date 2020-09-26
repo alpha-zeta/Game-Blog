@@ -388,6 +388,7 @@ nav .nav-links a:hover {
 
 .menu .row .col-7 .heading .social-btn {
   margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -462,6 +463,67 @@ nav .nav-links a:hover {
 
 .menu .row .col-7 .heading .s:hover i {
   color: #fff;
+}
+
+.change {
+  position: relative;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 300px;
+  height: 30px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.change .row {
+  width: unset;
+  border: 1px solid #fff5;
+  -webkit-box-shadow: inset 0 0 5px #777;
+          box-shadow: inset 0 0 5px #777;
+  border-radius: 100px;
+}
+
+.change .col-6 {
+  height: 100%;
+  text-align: center;
+}
+
+.change .col-6 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 1rem;
+  color: #748033;
+  font-weight: bold;
+}
+
+.change .col-6:nth-child(2) {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: -100px;
+  border-bottom-left-radius: -100px;
+}
+
+.change .col-6:nth-child(1) {
+  border-radius: 100px;
+}
+
+.change .switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #ccf000;
+  z-index: -1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .opened {
