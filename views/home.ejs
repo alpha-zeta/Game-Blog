@@ -1,0 +1,56 @@
+<%- include('partials/header'); -%>
+<div class="menu">
+  <div class="row">
+    <div class="col-5 colum">
+      <ul>
+        <li>Home</li>
+        <li>Categories</li>
+        <li>About us</li>
+        <li>Machine Specs</li>
+      </ul>
+    </div>
+    <div class="col-7 colum">
+
+    </div>
+  </div>
+</div>
+<div class="hero">
+    <div id="carouselExampleSlidesOnly heroImg" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://i.pinimg.com/originals/ba/4d/80/ba4d801db37ad7ba4d455d742d46e680.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://images.pushsquare.com/c46c7bb54c4c3/horizon-zero-dawn-ps4-playstation-4.original.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://3.bp.blogspot.com/-04Yk7jSytm4/Xqu-3ICjU5I/AAAAAAAAX70/lJ1J9x3L-dQODIODm24gww8ZChBpijFGwCLcBGAsYHQ/w914-h514-p-k-no-nu/eivor-assassins-creed-valhalla-poster-uhdpaper.com-4K-7.1968-wp.thumbnail.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://images.hdqwalls.com/wallpapers/fifa-21-game-1o.jpg" alt="Second slide">
+          </div>
+          <!-- https://i.pinimg.com/originals/ba/4d/80/ba4d801db37ad7ba4d455d742d46e680.jpg -->
+          <!-- https://data1.origin.com/content/dam/originx/web/app/programs/Download/aboutorigin_3840x2160_battlefield1.jpg -->
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="main">
+      <div class="heroText">
+          <h1 id="Name">JUSS_GAMES</h1>
+      </div>
+      <div class="search">
+          <div class="text">eg: <span class="typewriter" data-words='["Blogs","Gameplays","Game_reviews","Hardware_reviews"]' data-wait=2000></span></div>
+          <input class="type1" type="text" row="1" wrap="pre" spellcheck="false">
+          <button class="clk_btn"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    <div class="arow" onclick="location.href='#recent';">
+      <i class="fas fa-angle-down dArrow d1 f1"></i>
+      <i class="fas fa-angle-down dArrow d2 f2"></i>
+    </div>
+</div>
+<div class="recent" id="recent">
+
+</div>
+
+<%- include('partials/end'); -%>
