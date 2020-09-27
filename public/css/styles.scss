@@ -5,6 +5,12 @@ $normal:rgb(136, 145, 176);
 $normalFade:rgba(136, 145, 176, 0.7);
 
 $lemon:#ccf000;
+
+$fDark:rgba(0,0,0,0.4);
+
+html{
+    scroll-behavior: smooth;
+}
 .loader{
     display: block;
     width: 100vw;
@@ -264,14 +270,16 @@ nav {
             ul{
                 position: absolute;
                 width: 70%;
+                // height: 60vh;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 text-align: left;
                 list-style-type: none;
+                transition: all 0.2s ease-in !important;
                 li{
                     font-size: 3rem;
-                    color: #fff5;
+                    color: $fDark;
                     margin-bottom: 50px;
                     cursor: pointer;
                     line-height: 3.2rem;
@@ -279,12 +287,19 @@ nav {
                 li:hover{
                     color:$lemon;
                 }
+                li:last-child{
+                    margin: 0;
+                }
+            }
+            .hidden{
+                opacity: 0;
+                z-index: -1;
             }
         }
         .col-7{
             transition: all 0.3s ease-in;
             right: 0;
-            border-left: 2px solid #fff5;
+            border-left: 2px solid $fDark;
             text-align: center;
             align-items: center;
             justify-items: center;
@@ -296,18 +311,31 @@ nav {
                 transform: translate(-50%,-50%);
                 h1{
                     font-size: 5rem;
-                    color: #fff5;
+                    color: $fDark;
                 }
                 h3{
-                    color: #fff5;
+                    color: $fDark;
+                }
+                .signDiv{
+                    position: relative;
+                    height: 330px;
                 }
                 .sign{
+                    position: relative;
+                    top:0;
+                    left: 0;
                     text-align: left;
                     #emailHelp{
-                        color: #fff5 !important;
+                        color: $fDark !important;
                     }
                     opacity: 0;
-                    transition: all 0.3s ease-in;
+                    transition: all 0.5s ease-in;
+                }
+                .sign2{
+                    position: absolute;
+                    width: 100%;
+                    transform: translate(100vw);
+                    opacity: 0 !important;
                 }
                 .social-btn{
                     margin-top: 20px;
@@ -324,6 +352,7 @@ nav {
                     text-align: center;
                     justify-content: center;
                     margin-right: 40px;
+                    opacity: 0;
                     transition: all 0.3s ease-in;
                     cursor: pointer;
                     button{
@@ -371,8 +400,6 @@ nav {
                 }
 
             }
-        
-
         }
         transition: all 0.3s ease-in;
     }
@@ -387,6 +414,8 @@ nav {
     height: 30px;
     border-radius: 100px;
     text-align: center;
+    opacity:0;
+    transition: all 0.3s ease-in;
     .row{
         width: unset;
         border:1px solid #fff5;
@@ -396,6 +425,7 @@ nav {
     .col-6{
         height: 100%;
         text-align: center;
+        cursor: pointer;
         p{
             position: absolute;
             top:50%;
@@ -403,7 +433,7 @@ nav {
             transform: translate(-50%,-50%);
             margin: 0;
             font-size: 1rem;
-            color: #748033;
+            color: $fDark;
             font-weight: bold;;
         }
     }
@@ -441,6 +471,12 @@ nav {
                 .sign{
                     opacity: 1;
                 }
+                .social{
+                    opacity: 1;
+                }
+            }
+            .change{
+                opacity: 1;
             }
         }
     }
@@ -607,7 +643,93 @@ nav {
     width: 100vw;
     position: absolute;
     top: 100vh;
-    background: rgba(255,255,0,0.8);
+    background: #fff;
+}
+////////////checkboxes
+//vars
+$accent-font-color: #DB324D;
+$border-color: #5a5a5a;
+
+//position absolute mixin
+@mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+//transitions mixin
+@mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+.checkbox-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .checkbox-effect:not(:checked),
+  .checkbox-effect:checked{
+    position: absolute;
+    left: -9999px;
+  }
+  
+  label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .label{
+      left: -15px;
+  }
+
+  .checkbox-effect-5:not(:checked) + label:before,
+.checkbox-effect-5:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-right: 10px;
+  transform-origin: center center;
+  @include transition-mix;
+}
+
+.checkbox-effect-5:not(:checked) + label:after,
+.checkbox-effect-5:checked + label:after {
+  content: "\f00c";
+  font: {
+    family: fontawesome;
+    size: 10px;
+  }
+  display: flex;
+  height: 100%;
+  align-items:center;
+  @include position-absolute($left: 1px, $top: 0);
+  color: $fDark;
+}
+
+.checkbox-effect-5:not(:checked) + label:after {
+  opacity: 0;
+}
+
+.checkbox-effect-5:checked + label:before {
+  transform: scale(1.5);
+  background-color: $lemon;
+  border-color: $lemon;
+  @include transition-mix($timing: cubic-bezier(0.57, 1.9, 0, 1.52));
+}
+
+.checkbox-effect-5:checked + label:after {
+  opacity: 1;
+  @include transition-mix($delay: 0.2s);
 }
 
 ////////////********keyframes

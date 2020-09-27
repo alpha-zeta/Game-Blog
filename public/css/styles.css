@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .loader {
   display: block;
   width: 100vw;
@@ -329,11 +333,13 @@ nav .nav-links a:hover {
           transform: translate(-50%, -50%);
   text-align: left;
   list-style-type: none;
+  -webkit-transition: all 0.2s ease-in !important;
+  transition: all 0.2s ease-in !important;
 }
 
 .menu .row .colum ul li {
   font-size: 3rem;
-  color: #fff5;
+  color: rgba(0, 0, 0, 0.4);
   margin-bottom: 50px;
   cursor: pointer;
   line-height: 3.2rem;
@@ -343,11 +349,20 @@ nav .nav-links a:hover {
   color: #ccf000;
 }
 
+.menu .row .colum ul li:last-child {
+  margin: 0;
+}
+
+.menu .row .colum .hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
 .menu .row .col-7 {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   right: 0;
-  border-left: 2px solid #fff5;
+  border-left: 2px solid rgba(0, 0, 0, 0.4);
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -368,22 +383,38 @@ nav .nav-links a:hover {
 
 .menu .row .col-7 .heading h1 {
   font-size: 5rem;
-  color: #fff5;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .menu .row .col-7 .heading h3 {
-  color: #fff5;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.menu .row .col-7 .heading .signDiv {
+  position: relative;
+  height: 330px;
 }
 
 .menu .row .col-7 .heading .sign {
+  position: relative;
+  top: 0;
+  left: 0;
   text-align: left;
   opacity: 0;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .menu .row .col-7 .heading .sign #emailHelp {
-  color: #fff5 !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.menu .row .col-7 .heading .sign2 {
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translate(100vw);
+          transform: translate(100vw);
+  opacity: 0 !important;
 }
 
 .menu .row .col-7 .heading .social-btn {
@@ -405,6 +436,7 @@ nav .nav-links a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 40px;
+  opacity: 0;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   cursor: pointer;
@@ -475,6 +507,9 @@ nav .nav-links a:hover {
   height: 30px;
   border-radius: 100px;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .change .row {
@@ -488,6 +523,7 @@ nav .nav-links a:hover {
 .change .col-6 {
   height: 100%;
   text-align: center;
+  cursor: pointer;
 }
 
 .change .col-6 p {
@@ -498,7 +534,7 @@ nav .nav-links a:hover {
           transform: translate(-50%, -50%);
   margin: 0;
   font-size: 1rem;
-  color: #748033;
+  color: rgba(0, 0, 0, 0.4);
   font-weight: bold;
 }
 
@@ -537,6 +573,14 @@ nav .nav-links a:hover {
 }
 
 .opened .row .col-7 .heading .sign {
+  opacity: 1;
+}
+
+.opened .row .col-7 .heading .social {
+  opacity: 1;
+}
+
+.opened .row .col-7 .change {
   opacity: 1;
 }
 
@@ -731,7 +775,109 @@ nav .nav-links a:hover {
   width: 100vw;
   position: absolute;
   top: 100vh;
-  background: rgba(255, 255, 0, 0.8);
+  background: #fff;
+}
+
+.checkbox-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkbox-effect:not(:checked),
+.checkbox-effect:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label {
+  left: -15px;
+}
+
+.checkbox-effect-5:not(:checked) + label:before,
+.checkbox-effect-5:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #5a5a5a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  margin-right: 10px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.checkbox-effect-5:not(:checked) + label:after,
+.checkbox-effect-5:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.checkbox-effect-5:not(:checked) + label:after {
+  opacity: 0;
+}
+
+.checkbox-effect-5:checked + label:before {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background-color: #ccf000;
+  border-color: #ccf000;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.57, 1.9, 0, 1.52);
+          transition-timing-function: cubic-bezier(0.57, 1.9, 0, 1.52);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.checkbox-effect-5:checked + label:after {
+  opacity: 1;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 @-webkit-keyframes blink {

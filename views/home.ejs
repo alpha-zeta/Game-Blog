@@ -2,31 +2,42 @@
 <div class="menu">
   <div class="row">
     <div class="col-5 colum">
-      <ul>
+      <ul class="ul1">
         <li>Home</li>
         <li>Categories</li>
         <li>About us</li>
         <li>Machine Specs</li>
+      </ul>
+      <ul class="ul2 hidden">
+        <li>Action</li>
+        <li>Adventure</li>
+        <li>Exploring</li>
+        <li>Horror</li>
+        <li>RolePlay</li>
+        <li>Indie</li>
+        <li style="color: #ccf000;" class="back">< Back</li>
       </ul>
     </div>
     <div class="col-7 colum">
       <div class="heading">
         <h1>Hey there!</h1>
         <h3>Sign in for fun++</h3>
+        <div class="signDiv">
         <div class="sign">
           <form method="POST">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off" >
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
             </div>
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <!-- checkbox start -->
+              <input class="checkbox-effect checkbox-effect-5" id="get-up-5" type="checkbox" value="get-up-5" name="get-up-5"/>
+              <label class="label" for="get-up-5">Remember me</label>
+              <!-- checkbox end -->
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
           </form>
@@ -40,6 +51,24 @@
             <div class="s social">
               <button><i class="fab fa-steam-symbol"></i></button>
             </div>
+        </div>
+        </div>
+        <div class="sign sign2">
+          <form method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off" >
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Re-enter Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
         </div>
         </div>
         <div class="change">
@@ -87,7 +116,7 @@
           <button class="clk_btn"><i class="fas fa-search"></i></button>
       </div>
     </div>
-    <div class="arow" onclick="location.href='#recent';">
+    <div class="arow" onclick="scrollRecent();">
       <i class="fas fa-angle-down dArrow d1 f1"></i>
       <i class="fas fa-angle-down dArrow d2 f2"></i>
     </div>
